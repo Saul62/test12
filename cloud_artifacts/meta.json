@@ -1,0 +1,23 @@
+{
+  "K": 3,
+  "base_k": 2,
+  "glm_feature_order": [
+    "prob1",
+    "prob3",
+    "POD1_5max_feat"
+  ],
+  "cutoff": 0.0980660970811073,
+  "scale_info": {
+    "POD1_5max_scaled": false,
+    "POD1_5max_scale_factor": null
+  },
+  "preprocess": {
+    "imputer": "imputer.pkl",
+    "scaler": "scaler.pkl"
+  },
+  "models": {
+    "gmm": "gmm.pkl",
+    "logit": "logit.pkl"
+  },
+  "notes": "Python-only surrogate of LCMM+GLM. GMM over POD1-5 (imputed+scaled). Logistic on K-1 probs (excl. base_k) + POD1-5max(feat)."
+}
